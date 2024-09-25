@@ -1,8 +1,7 @@
-// src/services/unsplashApi.js
 import axios from "axios";
 
-const API_KEY = "N3LTlu_yvMtw0XbpCaPDJMPmv88_tkfszOQjkn13HgI";
-const BASE_URL = "https://api.unsplash.com/";
+const API_KEY = import.meta.env.VITE_UNSPLASH_API_KEY;
+const BASE_URL = import.meta.env.VITE_UNSPLASH_BASE_URL;
 
 export const fetchPhotos = async (query = "african", perPage = 8) => {
   const response = await axios.get(`${BASE_URL}search/photos`, {

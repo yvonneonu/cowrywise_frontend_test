@@ -37,24 +37,24 @@ export default {
 .photo-item {
   position: relative;
   overflow: hidden;
-  display: flex; /* Make the item a flex container */
-  flex-direction: column; /* Stack children vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-item img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   cursor: pointer;
-  object-fit: cover; /* Ensure the image covers the area */
+  object-fit: cover;
   transition: transform 0.3s ease;
-  flex-grow: 1; /* Allow the image to take available space */
+  flex-grow: 1;
 }
 
 .photo-info {
   text-align: center;
   padding-top: 10px;
-  position: relative; /* Change from absolute to relative */
-  margin-top: auto; /* Push this element to the bottom */
+  position: relative;
+  margin-top: auto;
   color: white;
 }
 
@@ -64,21 +64,18 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark tint */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
   .photo-grid {
-    grid-template-columns: 1fr; /* Single column for smaller screens */
+    grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 768px) {
   .photo-grid {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Three columns for larger screens */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
